@@ -189,13 +189,13 @@ while True:
 		timeGap = float(raw_input("How long do you want the gap before the key? (in seconds) "))
 		key = raw_input("What key do you want out of "+str(keyoutput.keys())+"? ")
 		print "Inserting", key, "to sequence at place", ind, "with a", timeGap, "second gap before", key, "\n"
-		data = [timeGap, key]
+		data = [timeGap, keyoutput[key]]
 		sequence.insert(ind-1, data)
 	elif option == "a":
 		print "Adding time gap into place in sequence:"
 		nicePrint.printList(sequence)
 		ind = int(raw_input("Where do you want to put it? (1 being first): "))
-		timeGap = float(raw_input("How long do you want the gap before the key? (in seconds) "))
+		timeGap = float(raw_input("How long do you want the gap to be? (in seconds) "))
 		print "Inserting time gap of", timeGap, "to sequence at place", ind, "\n"
 		data = [timeGap, " "]
 		sequence.insert(ind - 1, data)
